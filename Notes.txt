@@ -1,0 +1,6 @@
+  //DOCUMENT MIDDLEWARE: run before .save() and .create()
+  <schema here>.pre('save', function(next) {
+    this.slug = slugify(this.name, { lower: true });
+    next();
+  });
+  ========================================================
